@@ -1,0 +1,58 @@
+const pizzas = [
+  {
+      id: 1,
+      name: "pesto-margarita",
+      ingredients: ["Tomate cherry", "Mozzarella", "Pesto"],
+      stock: 8,
+      quantity: 0,
+      price: 11.990,
+      image: "../img/holy-pesto-margarita.PNG",
+  },
+  {
+      id: 2,
+      name: "criolla",
+      ingredients: ["Tomate", "Chorizo", "Pimiento verde"],
+      stock: 10,
+      quantity: 0,
+      price: 12.990,
+      image: "../img/criolla.PNG",
+  },
+  {
+      id: 3,
+      name: "Pepperoni",
+      ingredients: ["Tomate", "Pepperoni", "Parmesano"],
+      stock: 13,
+      quantity: 0,
+      price: 13.990,
+      image: "../img/pepperoni.PNG",
+  },
+  {
+      id: 4,
+      name: "Pepperoni",
+      ingredients: ["Tomate", "Pepperoni", "Parmesano"],
+      stock: 13,
+      quantity: 0,
+      price: 13.990,
+      image: "../img/pepperoni.PNG",
+  },
+  {
+      id: 5,
+      name: "TODAS LAS CARNES",
+      ingredients: ["Jamón", "Pepperoni", "Tocino"],
+      stock: 6,
+      quantity: 0,
+      price: 13.990,
+      image: "../img/todas-las-carnes.PNG",
+  },
+  {
+      id: 6,
+      name: "Clasic",
+      ingredients: ["Aceitunas", "Jamón", "Mozzarella"],
+      stock: 8,
+      quantity: 0,
+      price: 10.990,
+      image: "../img/classic.PNG",
+  },
+];
+
+export default pizzas;

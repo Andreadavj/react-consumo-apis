@@ -1,0 +1,312 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1px;
+}
+
+.card {
+  width: 100%;
+  max-width: 350px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card .btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.card .btn {
+  margin: 0 8px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.card .btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.card .btn-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.card .btn svg {
+  margin-right: 5px;
+}
+
+.card p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #22272a;
+  padding: 0.5rem 1rem;
+  border-radius: 10px 10px 0 0;
+}
+
+.navbar .navbar-brand {
+  color: white;
+}
+
+.navbar-left .btn {
+  background-color: #f8f9fa;
+  border: none;
+  margin: 0 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-left .btn:hover {
+  background-color: #e0e0e0;
+  color: cadetblue;
+}
+
+.navbar-right .btn {
+  display: flex;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-right .btn:hover {
+  background-color: #e0e0e0;
+  color: cadetblue;
+}
+
+.header {
+  border-radius: 0 0 10px 10px;
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: changeBackground 20s infinite ease-in-out;
+  color: white;
+  transition: background-image 1s ease-in-out;
+}
+
+.header h1 {
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.header p {
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out 1s forwards;
+  color: white;
+}
+
+.pagar-btn {
+  position: sticky;
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  border-top: 1px solid #ddd;
+  text-align: center;
+}
+
+@keyframes changeBackground {
+  0% {
+    background-image: url('img/banner.jpg');
+  }
+  33% {
+    background-image: url('img/banner1.jpg');
+  }
+  66% {
+    background-image: url('img/banner2.jpg');
+  }
+  100% {
+    background-image: url('img/banner.jpg');
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.container {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Cambiado a center */
+}
+
+
+.col-md-4 {
+  flex: 1 1 calc(33.333% - 20px); /* Permite que cada tarjeta ocupe un tercio del ancho con espacio */
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.footer {
+  background-color: #343a40;
+  color: white;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-white {
+  color: white;
+}
+
+.bg-dark {
+  background-color: #343a40;
+}
+
+/* Formularios */
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+/* llamar solo a los botones que estan en Register y Login para no perder las tarjetas*/
+
+.login-form button.btn,
+.register-form button.btn {
+  width: 50%;
+  margin: 0 auto;
+  display: block;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button.btn:hover,
+.register-form button.btn:hover {
+  background-color: #0056b3;
+}
+
+.register-form, .login-form {
+  max-width: 350px;
+  margin: 70px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 1px 5px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.register-form h2, .login-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.error-message, .success-message {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 15px;
+}
+
+.error-message {
+  color: red;
+}
+
+.success-message {
+  color: green;
+}
+
+/* Responsivo */
+
+/* Para pantallas pequeñas (celulares) */
+@media (max-width: 767px) {
+  .col-md-4 {
+    flex: 1 1 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+
+  .register-form, .login-form {
+    width: 100%;
+    padding: 15px;
+  }
+
+  button.btn {
+    font-size: 1rem;
+  }
+}
+
+/* Para pantallas medianas (tablets) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .col-md-4 {
+    flex: 1 1 45%;
+  }
+}
